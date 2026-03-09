@@ -1,12 +1,12 @@
 void main() {
   int angkaRahasia = 136;
-  int tebakan = 100; 
+  int tebakan = 150; 
 
   if (tebakan > angkaRahasia) {
-    print("Terlalu tinggi!");
+    print("Yeayy, tebakanmu tepat nihh!!!");
   } else if (tebakan < angkaRahasia) {
-    print("Terlalu rendah!");
+    print("Hmm, Sorry tebakannya masi salah nihh!!!");
   } else {
-    print("Congratulations! Tebakanmu benar.");
+    print("Congratulationss! Tebakanmu tepat 136.");
   }
 }
