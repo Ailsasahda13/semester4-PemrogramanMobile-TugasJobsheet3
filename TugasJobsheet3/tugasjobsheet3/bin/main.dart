@@ -5,30 +5,21 @@ void main() {
   int? tebakan;
   int percobaan = 0;
 
-  print("=== GAME TEBAK ANGKA (1-200) ===");
+  print("=== GAME TEBAK ANGKA ===");
 
   while (tebakan != angkaRahasia) {
-    stdout.write("Masukkan tebakanmu: ");
-
-    String? input = stdin.readLineSync();
-    tebakan = int.tryParse(input ?? "");
-
-    if (tebakan == null) {
-      print("Error: Masukkan angka yang valid!");
-      continue;
-    }
+    stdout.write("Tebakanmu: ");
+    tebakan = int.tryParse(stdin.readLineSync() ?? "");
+    if (tebakan == null) continue;
 
     percobaan++;
 
-    if (tebakan <= 0) {
-      print("Error: Masukkan angka positif!");
-    } else if (tebakan > angkaRahasia) {
-      print("Hmm, Tebakanmu terlalu TINGGI nihh!!!");
+    if (tebakan > angkaRahasia) {
+      print("Terlalu tinggi nih tebakanmu!");
     } else if (tebakan < angkaRahasia) {
-      print("Hmm, Tebakanmu terlalu RENDAH nihh!!!");
+      print("Terlalu rendah nih tebakanmu!");
     } else {
-      print("Congratulationss! Tebakanmu tepat 136.");
-      print("Kamu berhasil menebak dalam $percobaan kali percobaan.");
+      print("CONGRATULATIONS! Kamu menebak 136 dalam $percobaan kali percobaan.");
     }
   }
 }
